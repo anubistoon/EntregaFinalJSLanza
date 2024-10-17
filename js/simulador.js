@@ -112,7 +112,7 @@ document.getElementById("borrarBtn").addEventListener("click", () => {
 
 // Cargar pacientes desde un archivo JSON externo usando fetch
 function cargarDatosExternos() {
-    fetch('../data/pacientes.json')
+    fetch('./data/pacientes.json')
         .then(response => response.json())
         .then(data => {
             pacientes = data;
