@@ -1,51 +1,51 @@
 [
     {
-        "nombre": "María González",
+        "nombre": "Alejandro Romero",
         "edad": 29,
         "sintomas": ["Dolor de garganta", "Fiebre"]
     },
     {
-        "nombre": "Carlos Rodríguez",
+        "nombre": "Braulio Saralegui",
         "edad": 45,
         "sintomas": ["Cansancio", "Dolor muscular", "Tos"]
     },
     {
-        "nombre": "Lucía Fernández",
+        "nombre": "Guillermo Hill",
         "edad": 32,
         "sintomas": ["Dolor de cabeza", "Náuseas"]
     },
     {
-        "nombre": "Pablo Martínez",
+        "nombre": "Abi Mendelewicz",
         "edad": 54,
         "sintomas": ["Dolor en el pecho", "Dificultad para respirar"]
     },
     {
-        "nombre": "Sofía Ramírez",
+        "nombre": "Fabiana Hernandez",
         "edad": 21,
         "sintomas": ["Fiebre", "Escalofríos", "Tos seca"]
     },
     {
-        "nombre": "Javier López",
+        "nombre": "Melania La Rosa",
         "edad": 39,
         "sintomas": ["Dolor abdominal", "Diarrea", "Fiebre"]
     },
     {
-        "nombre": "Ana Pérez",
+        "nombre": "Patricia Mallo",
         "edad": 27,
         "sintomas": ["Congestión nasal", "Estornudos"]
     },
     {
-        "nombre": "Mateo Suárez",
+        "nombre": "Daniel Agresta",
         "edad": 50,
         "sintomas": ["Mareos", "Desmayos"]
     },
     {
-        "nombre": "Valeria Ortiz",
+        "nombre": "Alvaro Gonzalez",
         "edad": 36,
         "sintomas": ["Erupción cutánea", "Picazón"]
     },
     {
-        "nombre": "Fernando Silva",
+        "nombre": "Ismael Lopez",
         "edad": 42,
         "sintomas": ["Insomnio", "Ansiedad"]
     }
