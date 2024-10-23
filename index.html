@@ -3,16 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestión de Pacientes</title>
+    <title>Simulador de Registro de Pacientes</title>
     <link rel="stylesheet" href="./css/styles.css">
-    <!-- SweetAlert2 -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
     <div class="container">
-        <h1>Gestión de Pacientes</h1>
-        
-        <!-- Formulario para agregar pacientes -->
+        <h1>Registro de Pacientes</h1>
+    
         <form id="pacienteForm">
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" required>
@@ -29,16 +27,13 @@
             <button type="submit">Agregar Paciente</button>
         </form>
 
-        <!-- Lista de pacientes -->
         <h2>Lista de Pacientes</h2>
         <ul id="listaPacientes"></ul>
 
-        <!-- Botones para otras acciones -->
         <button id="borrarBtn">Borrar Todos los Pacientes</button>
         <button id="cargarBtn">Cargar Pacientes desde JSON</button>
     </div>
 
-    <!-- Archivo JavaScript -->
     <script src="./js/simulador.js"></script>
 </body>
 </html>
