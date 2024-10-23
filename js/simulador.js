@@ -1,7 +1,5 @@
-// Inicialización de pacientes desde localStorage o array vacío
 let pacientes = JSON.parse(localStorage.getItem("pacientes")) || [];
 
-// Función para mostrar la lista de pacientes en el DOM
 function mostrarPacientes() {
     const listaPacientes = document.getElementById("listaPacientes");
     listaPacientes.innerHTML = "";
@@ -23,14 +21,12 @@ function mostrarPacientes() {
             listaPacientes.appendChild(li);
         });
 
-        // Agregar evento de eliminación
         document.querySelectorAll('.eliminar').forEach(btn => {
             btn.addEventListener('click', eliminarPaciente);
         });
     }
 }
 
-// Función para agregar un nuevo paciente
 document.getElementById("pacienteForm").addEventListener("submit", function(event) {
     event.preventDefault();
 
@@ -39,7 +35,6 @@ document.getElementById("pacienteForm").addEventListener("submit", function(even
     const edad = parseInt(document.getElementById("edad").value.trim());
     const sintomas = document.getElementById("sintomas").value.trim().split(",").map(s => s.trim());
 
-    // Validación de campos
     if (!nombre || /[^a-zA-Z\s]/.test(nombre) || !apellido || /[^a-zA-Z\s]/.test(apellido) || isNaN(edad) || edad <= 0 || sintomas.length === 0) {
         Swal.fire({
             icon: 'error',
@@ -49,20 +44,17 @@ document.getElementById("pacienteForm").addEventListener("submit", function(even
         return;
     }
 
-    // Crear objeto paciente
     const paciente = {
         nombre: `${nombre} ${apellido}`,
         edad: edad,
         sintomas: sintomas
     };
 
-    // Añadir paciente a la lista y actualizar localStorage
     pacientes.push(paciente);
     localStorage.setItem("pacientes", JSON.stringify(pacientes));
     mostrarPacientes();
     document.getElementById("pacienteForm").reset();
 
-    // Alerta de éxito usando SweetAlert2
     Swal.fire({
         icon: 'success',
         title: 'Paciente registrado',
@@ -70,14 +62,12 @@ document.getElementById("pacienteForm").addEventListener("submit", function(even
     });
 });
 
-// Función para eliminar un paciente
 function eliminarPaciente(event) {
     const index = event.target.dataset.index;
     pacientes.splice(index, 1);
     localStorage.setItem("pacientes", JSON.stringify(pacientes));
     mostrarPacientes();
 
-    // Alerta de paciente eliminado
     Swal.fire({
         icon: 'success',
         title: 'Paciente eliminado',
@@ -85,7 +75,6 @@ function eliminarPaciente(event) {
     });
 }
 
-// Función para borrar toda la lista de pacientes
 document.getElementById("borrarBtn").addEventListener("click", () => {
     Swal.fire({
         title: '¿Estás seguro?',
@@ -110,7 +99,6 @@ document.getElementById("borrarBtn").addEventListener("click", () => {
     });
 });
 
-// Cargar pacientes desde un archivo JSON externo usando fetch
 function cargarDatosExternos() {
     fetch('https://anubistoon.github.io/EntregaFinalJSLanza/data/pacientes.json')
         .then(response => response.json())
@@ -134,8 +122,6 @@ function cargarDatosExternos() {
         });
 }
 
-// Evento para cargar datos externos
 document.getElementById("cargarBtn").addEventListener("click", cargarDatosExternos);
 
-// Mostrar pacientes al cargar la página
 mostrarPacientes();
